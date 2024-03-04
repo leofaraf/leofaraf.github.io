@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/profile.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Profile</title>
+    <title>Portfolio</title>
 </head>
 <body>
     <div class="fixed flex w-full bg-white justify-center">
-        <div class="flex  w-full p-4 sm:p-8 sm:px-14 justify-between items-center max-w-[1440px]">
+        <div class="flex w-full p-4 sm:p-8 sm:px-14 justify-between items-center max-w-[1440px]">
             <a href="#home" class="font-bold sm:text-2xl">Leon Farafonov</a>
             <div class="flex gap-3">
                 <a href="#home" class="hidden sm:block">Home</a>
@@ -36,8 +37,63 @@
     </div>
     
     <div class="flex w-full bg-black justify-center">
-        <div id="showcases" class="flex w-full h-screen flex-col justify-center items-center max-w-[1440px]">
-            <p class="text-white font-bold text-xl">🚧In development🚧</p>
+        <div id="showcases" class="flex flex-col w-full min-h-screen p-4 justify-center items-center max-w-[1440px] gap-5">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="flex flex-col font-sans justify-between gap-3 bg-white p-2 rounded-lg w-full sm:w-64 h-96">
+                    <div class="flex flex-col gap-2">
+                        <div class="w-full h-32 bg-cover bg-left bg-blue-500" style="background-image: url(assets/projects/autoclicker.png);"></div>
+                        <p class="font-bold">AutoClickeRGUI</p>
+                        <p">This is a quick auto clicker written in Rust with beautiful GUI</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex gap-3 text-sm">
+                            <p class="px-2 bg-gray-300 rounded-lg">Rust</p>
+                            <p class="px-2 bg-gray-300 rounded-lg">GUI</p>
+                            <p class="px-2 bg-gray-300 rounded-lg">Windows</p>
+                        </div>
+                        <a href="https://github.com/leofaraf/AutoClickeRGUI" target="_blank" class="w-full p-2 bg-blue-500 hover:bg-blue-600 text-white hover:text-white rounded-lg text-center">
+                            Project page
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="flex flex-col font-sans justify-between gap-3 bg-white p-2 rounded-lg w-full sm:w-64 h-96">
+                    <div class="flex flex-col gap-2">
+                        <div class="w-full h-32 bg-cover bg-left bg-blue-500" style="background-image: url(assets/projects/make_vpn_bot.png);"></div>
+                        <p class="font-bold">make-vpn-bot</p>
+                        <p>telegram bot that help be private anywhere</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex gap-3 text-sm">
+                            <p class="px-2 bg-gray-300 rounded-lg">Rust</p>
+                            <p class="px-2 bg-gray-300 rounded-lg">Telegram bot</p>
+                        </div>
+                        <a href="https://github.com/leofaraf/make-vpn-bot" target="_blank" class="w-full p-2 bg-blue-500 hover:bg-blue-600 text-white hover:text-white rounded-lg text-center">
+                            Project page
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="flex flex-col font-sans justify-between gap-3 bg-white p-2 rounded-lg w-full sm:w-64 h-96">
+                    <div class="flex flex-col gap-2">
+                        <div class="w-full h-32 bg-cover bg-left bg-blue-500" style="background-image: url(assets/projects/3dconv.png);"></div>
+                        <p class="font-bold">3d-converter-py</p>
+                        <p>python 3d models convertor which support obj, dae, glb, fbx, ply, stl</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex gap-3 text-sm">
+                            <p class="px-2 bg-gray-300 rounded-lg">Python</p>
+                            <p class="px-2 bg-gray-300 rounded-lg">CLI</p>
+                        </div>
+                        <a href="https://github.com/leofaraf/3d-converter-py" target="_blank" class="w-full p-2 bg-blue-500 hover:bg-blue-600 text-white hover:text-white rounded-lg text-center">
+                            Project page
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/leofaraf" target="_blank" class="w-48 p-2 bg-white hover:bg-gray-100 hover:bg-blue-600 hover:text-black rounded-lg text-center">
+                Show more
+            </a>
         </div>
     </div>
 
@@ -81,16 +137,16 @@
             <div class="w-full py-8 flex flex-col items-center gap-3">
                 <h1 class="text-xl font-bold">Hit me up</h1>
                 <div class="grid grid-cols-4 gap-5">
-                    <a href="https://www.fiverr.com/pe/yQbQ75">
+                    <a href="https://www.fiverr.com/pe/yQbQ75" target="_blank">
                         <img src="assets/logos/fiverr.png" alt="fiverr" class="w-14 h-14 rounded-full border border-black">
                     </a>
-                    <a href="https://www.upwork.com/workwith/leonf5">
+                    <a href="https://www.upwork.com/workwith/leonf5" target="_blank">
                         <img src="assets/logos/upwork.png" alt="upwork" class="w-14 h-14 rounded-full border border-black">
                     </a>
-                    <a href="https://kwork.ru/user/leon_farafonov?ref=10279171">
+                    <a href="https://kwork.ru/user/leon_farafonov?ref=10279171" target="_blank">
                         <img src="assets/logos/kwork.png" alt="kwork" class="w-14 h-14 rounded-full border border-black">
                     </a>
-                    <a href="https://t.me/leofaraf">
+                    <a href="https://t.me/leofaraf" target="_blank">
                         <img src="assets/logos/telegram.png" alt="telegram" class="w-14 h-14 rounded-full border border-black">
                     </a>
                 </div>
@@ -100,8 +156,13 @@
     
 
     <div class="flex w-full bg-black justify-center">
-        <div class="flex w-full h-48 text-white justify-center items-center max-w-[1440px]">
-            <p class="font-bold">🚧In development🚧</p>
+        <div class="flex w-full  h-36 text-white justify-between items-center max-w-[1440px] p-3">
+            <div class="flex gap-3">
+                <a href="#home">Home</a>
+                <a href="#showcases">Showcases</a>
+                <a href="#contacts" class="hidden sm:block">Hit me up</a>
+            </div>
+            <a href="https://github.com/leofaraf">Github⭐</a>
         </div>
     </div>
 </body>
