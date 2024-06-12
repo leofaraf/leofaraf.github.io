@@ -1,0 +1,19 @@
+.btn-gray-full-rounded {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border-style: none;
+    background-color: var(--dark-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .btn-gray-full-rounded {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 800px) {}
