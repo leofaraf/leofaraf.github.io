@@ -7,84 +7,25 @@
     gap: 15px
 }
 
-.about-block {
-    margin-top: 80px;
+.flex-gap {
     display: flex;
-    width: 100%;
-    gap: 80px;
+    align-items: center;
+    gap: 10px
 }
 
-.get-in-touch-form {
-    min-width: 350px;
-    width: 350px;
-    height: 500px;
-    border-radius: 10px;
-    background-color: var(--light-flesh);
-}
-
-@media screen and (max-width: 620px) {
-    .get-in-touch-form {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .about-block {
-        flex-direction: column;
-    }
-
-    .rest-about-block {
-        flex-direction: column;
-    }
-
-    .get-in-touch-block {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .rest-about-block {
-        position: relative;
-        height: 100%;
-        width: 100%;
-        background-color: var(--light-flesh);
-    }
-}
-
-.faq {
+.between-gap {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.faq-item {
-    margin-bottom: 20px;
+.column-and-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px
 }
 
-.faq-question {
-    cursor: pointer;
-    padding: 15px 20px;
-    background-color: #F0F0F0;
-    border-radius: 5px 5px 0 0;
-    transition: background-color 0.3s ease;
-}
-
-.faq-question:hover {
-    background-color: #E0E0E0;
-}
-
-.faq-answer {
-    display: none;
-    padding: 15px 20px;
-    background-color: #FFF;
-    border-radius: 0 0 5px 5px;
-    transition: height 0.3s ease;
-}
-
-.faq-answer.active {
-    display: block;
-    height: auto;
+.justify-end {
+    justify-content: end;
 }

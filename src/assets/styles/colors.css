@@ -6,3 +6,23 @@
     --light-gray: #8B8B8B;
     --dark-gray: #353534;
 }
+
+.light-flesh-bg {
+    background-color: var(--light-flesh);
+}
+
+.flesh-bg {
+    background-color: var(--flesh);
+}
+
+.gray-text {
+    color: var(--light-gray);
+}
+
+.black-text {
+    color: black;
+}
+
+.white-text {
+    color: white;
+}

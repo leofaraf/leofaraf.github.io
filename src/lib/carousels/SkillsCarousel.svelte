@@ -93,7 +93,7 @@
 
     let current_profile = 0;
 
-    function handle_arrow_left() {
+    const handle_arrow_left = () => {
         if (current_profile === 0) {
             current_profile = profiles.length - 1;
         } else {
@@ -101,7 +101,7 @@
         };
     }
 
-    function handle_arrow_right() {
+    const handle_arrow_right = () => {
         if (current_profile === profiles.length - 1) {
             current_profile = 0;
         } else {

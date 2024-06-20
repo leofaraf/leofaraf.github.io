@@ -2,9 +2,10 @@
     import open_in_full from '../assets/profiles/open_in_full.svg'
     import auto from '../assets/profiles/auto.svg'
     import draw from '../assets/profiles/draw.svg'
+    import GetInTouchButton from './buttons/GetInTouchButton.svelte';
 </script>
 
-<div class="box">
+<div id="home" class="box">
     <div class="box-inner">
         <div class="navbar">
             <h2>Leon Farafonov</h2>
@@ -26,7 +27,9 @@
                 <p class="description">Quick results within a few weeks, not months.</p>
                 <h1 class="nowrap">Who am I?</h1>
             </div>
-            <button class="green-button regular desktop">Get in touch</button>
+            <GetInTouchButton class="desktop">
+                Get in touch
+            </GetInTouchButton>
         </div>
         <div class="main-list">
             <div class="main-list-item">
@@ -61,7 +64,9 @@
             </div>
         </div>
         <div class="centered-on-mobile">
-            <button class="green-button regular mobile">Get in touch</button>
+            <GetInTouchButton class="mobile">
+                Get in touch
+            </GetInTouchButton>
         </div>
     </div>
 </div>

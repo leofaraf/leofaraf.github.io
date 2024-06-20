@@ -1,0 +1,10 @@
+.common-bold {
+    font-family: 'NotoSans-SemiBold';
+    font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .common-bold {
+        font-size: 15px;
+    }
+}
