@@ -38,6 +38,13 @@
         padding: 15px 0;
     }
 
+    .works {
+        display: flex;
+        flex-direction: column;
+        gap: 190px;
+        margin-bottom: 40px;
+    }
+
     @media screen and (max-width: 620px) {
         .company-review-box-inner {
             flex-direction: column;
@@ -67,6 +74,10 @@
         .company-review-box {
             height: 375px;
         }
+
+        .works {
+            gap: 100px;
+        }
     }
 
     @media screen and (max-width: 1000px) {
@@ -85,7 +96,7 @@
     import founderPhoto from "/images/founder_photo.jpg"
 </script>
 
-<div id="works">
+<div id="works" class="works">
     <WorksCarousel />
     <div class="box">
         <div class="box-inner full">

@@ -1,4 +1,10 @@
 <style>
+    .carousel {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
     .carousel-header {
         display: flex;
         justify-content: space-between;
@@ -13,19 +19,6 @@
         height: 100%;
     }
 
-    /* .card {
-        background-color: black;
-        border-radius: 10px;
-        width: 450px;
-        height: 470px;
-        padding: 40px;
-        padding-top: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        box-sizing: border-box;
-    } */
-    
     .logo-box {
         aspect-ratio: 1 / 1;
         display: flex;
@@ -100,14 +93,16 @@
     .wrapper .work-carousel {
         display: grid;
         grid-auto-flow: column;
-        grid-auto-columns: calc((100% / 3) - 12px);
+        grid-auto-columns: calc((100% / 2));
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         gap: 16px;
         border-radius: 8px;
         scroll-behavior: smooth;
         scrollbar-width: none;
+        margin-bottom: -300px;
     }
+
     .work-carousel::-webkit-scrollbar {
         display: none;
     }
@@ -120,48 +115,42 @@
         cursor: grab;
         user-select: none;
     }
-    .work-carousel :where(.card, .img) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+
     .work-carousel .card {
         background-color: black;
         border-radius: 10px;
-        padding: 40px;
-        padding-top: 60px;
+        padding: 30px;
+        gap: 10px;
+        padding-top: 50px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         box-sizing: border-box;
         color: white;
     }
-    .work-carousel .card .img {
-        background: #8b53ff;
-        height: 148px;
-        width: 148px;
-        border-radius: 50%;
-    }
-    .card .img img {
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid #fff;
-    }
-    .work-carousel .card h2 {
-        font-weight: 500;
-        font-size: 1.56rem;
-        margin: 30px 0 5px;
-    }
-    .work-carousel .card span {
-        color: #6a6d78;
-        font-size: 1.31rem;
-    }
 
-    @media screen and (max-width: 900px) {
+    @media only screen and (min-width: 1000px) {
         .wrapper .work-carousel {
-            grid-auto-columns: calc((100% / 2) - 9px);
+            grid-auto-columns: calc((100% / 3));
+        }
+    }
+    
+    @media only screen and (min-width: 800px) {
+        .card {
+            height: 470px;
+        }
+    }
+    
+     
+    @media only screen and (max-width: 800px) {
+        .wrapper .work-carousel {
+            grid-auto-columns: calc((100% / 2) - 40px);
+            width: calc(100vw - 80px);
+            margin-bottom: -200px;
+        }
+
+        .card {
+            height: 320px;
         }
     }
 
@@ -213,11 +202,13 @@
         },
     ]
 
-    onMount(() => {
-        const wrapper = document.querySelector(".wrapper");
-        const carousel = document.querySelector(".work-carousel");
+    let wrapperElement;
+
+    onMount(e => {
+        const wrapper = wrapperElement.querySelector(".wrapper");
+        const carousel = wrapperElement.querySelector(".work-carousel");
         const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-        const arrowBtns = document.querySelectorAll("button");
+        const arrowBtns = wrapperElement.querySelectorAll("button");
         const carouselChildrens = [...carousel.children];
 
         let isDragging = false,
@@ -234,13 +225,11 @@
             .slice(-cardPerView)
             .reverse()
             .forEach((card) => {
-                console.log("ch: ", card)
                 carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
             });
 
         // Insert copies of the first few cards to end of carousel for infinite scrolling
         carouselChildrens.slice(0, cardPerView).forEach((card) => {
-            console.log("ch2: ", card)
             carousel.insertAdjacentHTML("beforeend", card.outerHTML);
         });
 
@@ -298,18 +287,17 @@
 
         carousel.addEventListener("mousedown", dragStart);
         carousel.addEventListener("mousemove", dragging);
-        document.addEventListener("mouseup", dragStop);
+        wrapperElement.addEventListener("mouseup", dragStop);
         carousel.addEventListener("scroll", infiniteScroll);
         wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
     })
 </script>
 
 <div class="box petty-black-bg">
-    <div class="box-inner full carousel">
-        <p class="description mobile">Some of our recent work</p>
+    <div class="box-inner full carousel" bind:this={wrapperElement}>
         <div class="carousel-header">
             <div class="carousel-description">
-                <p class="description desktop">Some of our recent work</p>
+                <p class="description">Some of our recent work</p>
             </div>
             <div class="gap-and-between">
                 <button id="left" class="btn-gray-full-rounded">

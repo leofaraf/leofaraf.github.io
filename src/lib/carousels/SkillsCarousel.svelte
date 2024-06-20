@@ -66,27 +66,59 @@
         {
             name: "Fullstack developer",
             icons: [
-                "/technologies/fullstack/react.svg",
-                "/technologies/fullstack/postgresql.svg",
-                "/technologies/fullstack/spring-boot.svg",
-                "/technologies/fullstack/rust.svg",
-                "/technologies/fullstack/tailwind-css.svg",
-                "/technologies/fullstack/nodejs.svg",
+                {
+                    website: "https://react.dev/",
+                    src: "/technologies/fullstack/react.svg"
+                },
+                {
+                    website: "https://www.postgresql.org/",
+                    src: "/technologies/fullstack/postgresql.svg"
+                },
+                {
+                    website: "https://spring.io/",
+                    src: "/technologies/fullstack/spring-boot.svg"
+                },
+                {
+                    website: "https://www.rust-lang.org/",
+                    src: "/technologies/fullstack/rust.svg"
+                },
+                {
+                    website: "https://tailwindcss.com/",
+                    src: "/technologies/fullstack/tailwind-css.svg"
+                },
+                {
+                    website: "https://nodejs.org/",
+                    src: "/technologies/fullstack/nodejs.svg"
+                },
             ]
         },
         {
             name: "Automatization expert",
             icons: [
-                "/technologies/automation/python.svg",
-                "/technologies/automation/selenium.svg",
-                "/technologies/automation/dolphin-anty.svg",
+                {
+                    website: "https://www.python.org/",
+                    src: "/technologies/automation/python.svg"
+                },
+                {
+                    website: "https://www.selenium.dev/",
+                    src: "/technologies/automation/selenium.svg"
+                },
+                {
+                    website: "https://dolphin-anty.com/",
+                    src: "/technologies/automation/dolphin-anty.svg"
+                },
             ]
         },
         {
             name: "UI/UX designer",
             icons: [
-                "/technologies/ui-ux/figma.svg",
-                "/technologies/ui-ux/table.svg"
+                {
+                    website: "https://www.figma.com/",
+                    src: "/technologies/ui-ux/figma.svg"
+                },
+                {
+                    src: "/technologies/ui-ux/table.svg"
+                }
             ]
         }
     ]
@@ -128,8 +160,8 @@
             </div>
         </div>
         <div class="carousel-content">
-            {#each profiles[current_profile].icons as icon}
-                <div class="logo-box"><img class="technology-logo" src={icon} alt="logo"></div>
+            {#each profiles[current_profile].icons as {website, src}}
+                <a href={website} target="_blank" class="logo-box"><img class="technology-logo" src={src} alt="logo"></a>
             {/each}
         </div>
     </div>

@@ -26,20 +26,8 @@
 
     .get-in-touch-buttons {
         display: flex;
+        align-items: center;
         gap: 30px;
-    }
-
-    .get-in-touch-primary-button {
-        background-color: white;
-        color: black;
-        padding: 10px 15px;
-        border-radius: 50px;
-    }
-
-    .get-in-touch-second-button {
-        border: 2px solid white;
-        padding: 10px 15px;
-        border-radius: 50px;
     }
 
     .get-in-touch-contacts {
@@ -58,6 +46,10 @@
             width: 10px;
             height: 10px;
         }
+
+        .email-block {
+            margin-bottom: 50px;
+        }
     }
 
     @media screen and (max-width: 1000px) {
@@ -74,7 +66,26 @@
 </style>
 
 <script>
+    import ContactButton from './buttons/ContactButton.svelte';
     import arrowTop from '/icons/arrows/arrow-top.svg';
+
+    const contacts = [
+        {
+            title: "TELEGRAM",
+            href: "https://t.me/leofaraf",
+            primary: true
+        },
+        {
+            title: "FIVERR",
+            href: "https://www.fiverr.com/pe/yQbQ75",
+            primary: false
+        },
+        {
+            title: "DISCORD",
+            href: "https://discordapp.com/users/1106200623260631153",
+            primary: false
+        }
+    ] 
 </script>
 
 <div id="get_in_touch">
@@ -89,15 +100,11 @@
 
             <div class="between-gap">
                 <div class="not-big-screen full flex-between">
-                    <button class="get-in-touch-button get-in-touch-primary-button description-bold">
-                        TELEGRAM
-                    </button>
-                    <button class="get-in-touch-button get-in-touch-second-button description-bold">
-                        FIVERR
-                    </button>
-                    <button class="get-in-touch-button get-in-touch-second-button description-bold">
-                        DISCORD
-                    </button>
+                    {#each contacts as {title, href, primary}}
+                        <ContactButton href={href} {primary}>
+                            {title}
+                        </ContactButton>
+                    {/each}
                 </div>
     
                 <div class="get-in-touch-contacts">
@@ -108,15 +115,11 @@
                         <a href="tel:+995500702364" class="common white-text">+995500702364</a>
                     </div>
                     <div class="get-in-touch-buttons big-screen">
-                        <button class="get-in-touch-button get-in-touch-primary-button description-bold">
-                            TELEGRAM
-                        </button>
-                        <button class="get-in-touch-button get-in-touch-second-button description-bold">
-                            FIVERR
-                        </button>
-                        <button class="get-in-touch-button get-in-touch-second-button description-bold">
-                            DISCORD
-                        </button>
+                        {#each contacts as {title, href, primary}}
+                            <ContactButton href={href} {primary}>
+                                {title}
+                            </ContactButton>
+                        {/each}
                     </div>
                     <div class="space-column">
                         <a href="#home" class="flex-gap justify-end">
