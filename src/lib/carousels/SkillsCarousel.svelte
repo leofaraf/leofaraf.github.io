@@ -68,6 +68,10 @@
         .carousel-header {
             height: 40px;
         }
+        
+        .carousel-description {
+            height: auto;
+        }
     }
 </style>
 
