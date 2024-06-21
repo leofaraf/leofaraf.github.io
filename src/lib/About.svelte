@@ -17,15 +17,20 @@
     }
 
     .faq-answer {
-        display: none;
         padding: 0 20px;
-        padding-bottom: 10px;
-        text-align: start;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 300ms linear, max-height 300ms linear;
+        will-change: opacity, max-height;
     }
 
     .faq-answer.active {
-        display: block;
-        height: auto;
+        opacity: 1;
+        max-height: 9em;
+        transition: all 300ms linear;
+        will-change: opacity, max-height;
+        padding-bottom: 10px;
     }
 
     .about-block {
@@ -96,6 +101,7 @@
     import GetInTouchForm from "./forms/GetInTouchForm.svelte";
     import open from "/icons/open.svg";
     import close from "/icons/close.svg";
+    import PlusMinus from "./buttons/PlusMinus.svelte";
 
     let activeIndex = 0
 
@@ -150,7 +156,7 @@
                             <button class="faq-question" on:click={() => toggleAnswer(i)}>
                                 <p class="description faq-index">{formatNumber(i+1)}</p>
                                 <p class="common-bold faq-question-text">{item.question}</p>
-                                <img class="faq-logo" src={i == activeIndex ? close : open} alt="open/close">
+                                <PlusMinus status={i === activeIndex && "active"} />
                             </button>
                             <div class="slitter-line"></div>
 

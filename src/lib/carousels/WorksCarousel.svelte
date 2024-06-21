@@ -285,11 +285,7 @@
             clearTimeout(timeoutId);
         };
 
-        carousel.addEventListener("mousedown", dragStart);
-        carousel.addEventListener("mousemove", dragging);
-        wrapperElement.addEventListener("mouseup", dragStop);
         carousel.addEventListener("scroll", infiniteScroll);
-        wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
     })
 </script>
 

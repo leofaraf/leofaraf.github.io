@@ -27,8 +27,21 @@
         flex-direction: column;
         gap: 30px;
     }
+
+    /* .logo-box:hover {
+        box-shadow: 0 14px 28px var(--light-flesh), 0 10px 10px var(--light-flesh);
+    } */
+
+    .logo-box:hover .technology-logo {
+        transition: all 0.3s cubic-bezier(.25,.8,.25,.8);
+        transform: scale(1.05);
+    }
+    .logo-box:not(:hover) .technology-logo {
+        transition: all 0.3s cubic-bezier(.25,.8,.25,.8);
+    }
     
     .logo-box {
+        
         aspect-ratio: 1 / 1;
         display: flex;
         width: 100%;
