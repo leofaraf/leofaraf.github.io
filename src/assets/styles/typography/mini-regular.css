@@ -1,0 +1,10 @@
+.mini-regular {
+    font-family: 'NotoSans-Regular';
+    font-size: 14px;
+}
+
+@media screen and (max-width: 800px) {
+    .mini-regular {
+        font-size: 12px;
+    }
+}

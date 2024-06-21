@@ -1,0 +1,19 @@
+.arrow-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.technology-logo {
+    color: white;
+    width: 80%;
+    height: 80%;
+}
+
+@media screen and (max-width: 800px) {
+    .arrow-logo {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+@media screen and (min-width: 800px) {}

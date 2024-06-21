@@ -1,0 +1,10 @@
+.description-bold {
+    font-family: 'NotoSans-SemiBold';
+    font-size: 16px;
+}
+
+@media screen and (max-width: 800px) {
+    .description-bold {
+        font-size: 14px;
+    }
+}

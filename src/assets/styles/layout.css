@@ -1,0 +1,31 @@
+.full {
+    width: 100%;
+}
+
+.gap-and-between {
+    display: flex;
+    gap: 15px
+}
+
+.flex-gap {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.between-gap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.column-and-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.justify-end {
+    justify-content: end;
+}
