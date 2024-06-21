@@ -33,14 +33,7 @@ a {
     text-decoration: none;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-}
+
 
 h2 {
     font-family: 'NotoSans-SemiBold';
@@ -151,7 +144,7 @@ h1 {
     } */
 
     h1 {
-        font-size: 36px;
+        font-size: 30px;
     }
 
     .description {

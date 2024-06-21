@@ -73,17 +73,20 @@
         {
             title: "TELEGRAM",
             href: "https://t.me/leofaraf",
-            primary: true
+            primary: true,
+            important: true
         },
         {
             title: "FIVERR",
             href: "https://www.fiverr.com/pe/yQbQ75",
-            primary: false
+            primary: false,
+            important: true
         },
         {
             title: "DISCORD",
             href: "https://discordapp.com/users/1106200623260631153",
-            primary: false
+            primary: false,
+            important: false
         }
     ] 
 </script>
@@ -100,8 +103,8 @@
 
             <div class="between-gap">
                 <div class="not-big-screen full flex-between">
-                    {#each contacts as {title, href, primary}}
-                        <ContactButton href={href} {primary}>
+                    {#each contacts as {title, href, primary, important}}
+                        <ContactButton href={href} {primary} {important}>
                             {title}
                         </ContactButton>
                     {/each}
@@ -128,7 +131,7 @@
                             </p>
                             <img class="arrow-top-icon" src={arrowTop} alt="arrow-top">
                         </a>
-                        <p class="common white-text">All Rights Reserved</p>
+                        <p class="common white-text">Rights Reserved</p>
                     </div>
                 </div>
             </div>

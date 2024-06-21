@@ -63,6 +63,7 @@
         .get-in-touch-block {
             display: flex;
             width: 100%;
+            box-sizing: border-box;
             justify-content: center;
         }
     }
@@ -91,8 +92,8 @@
                 </div>
             </div>
         </div>
-        <GetInTouchButton>
-            Get other methods
+        <GetInTouchButton class="full">
+            Other methods
         </GetInTouchButton>
     </div>
 </span>

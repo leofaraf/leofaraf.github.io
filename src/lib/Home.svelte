@@ -1,3 +1,21 @@
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 800px) {
+        ul {
+            width: auto;
+            gap: 40px;
+        }
+    }
+</style>
+
 <script>
     import open_in_full from '../assets/profiles/open_in_full.svg'
     import auto from '../assets/profiles/auto.svg'
