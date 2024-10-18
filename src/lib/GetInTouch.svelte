@@ -96,8 +96,8 @@
         <div class="box-inner full">
             <div class="email-block">
                 <p class="description-bold gray-text">GET IN TOUCH</p>
-                <a class="gray-text" href="mailto:leofaraf@gmail.com">
-                    <h1 class="email-link">LEOFARAF@GMAIL.COM</h1>
+                <a class="gray-text" href="mailto:leofaraf@proton.me">
+                    <h1 class="email-link">LEOFARAF@PROTON.ME</h1>
                 </a>
             </div>
 

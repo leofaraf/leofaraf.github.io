@@ -110,7 +110,7 @@
                             “I'm excited about the real estate CRM we've developed together.
                             Your contributions have ensured it will be a comprehensive and user-friendly platform for our team.”
                         </p>
-                        <p class="description-bold underline">Founder. Nelly Farafonova</p>
+                        <p class="description-bold underline">Founder. Nelly F.</p>
                     </div>
                 </div>
             </div>
