@@ -173,13 +173,6 @@
 
     const works = [
         {
-            src: converterPy,
-            title: "Open-source 3D models convertor",
-            description: "3d-converter-py models convertor which support obj, dae, glb, fbx, ply, stl",
-            date: "Feb, 28, 2024",
-            category: "Automation"
-        },
-        {
             src: launcher,
             title: "Game launcher (GUI)",
             description: "Cross-platform, high performance game launcher for famous youtuber (1M+)",
@@ -192,6 +185,13 @@
             description: "CRM that helps brokers target clients",
             date: "Sep, 30, 2023",
             category: "Fullstack"
+        },
+        {
+            src: converterPy,
+            title: "Open-source 3D models convertor",
+            description: "3d-converter-py models convertor which support obj, dae, glb, fbx, ply, stl",
+            date: "Feb, 28, 2024",
+            category: "Automation"
         },
         {
             src: autoclickergui,
