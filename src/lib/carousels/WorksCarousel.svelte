@@ -168,7 +168,7 @@
 
     import converterPy from '/images/works/3d-converter-py.png'
     import autoclickergui from '/images/works/autoclickergui.png'
-    import makeVpnBot from '/images/works/make-vpn-bot.png'
+    import launcher from '/images/works/launcher.jpg'
     import realEstateCrm from '/images/works/real-estate-crm.png'
 
     const works = [
@@ -180,7 +180,7 @@
             category: "Automation"
         },
         {
-            src: makeVpnBot,
+            src: launcher,
             title: "Game launcher (GUI)",
             description: "Cross-platform, high performance game launcher for famous youtuber (1M+)",
             date: "Sep, 3, 2024",
@@ -191,7 +191,7 @@
             title: "Real-estate CRM",
             description: "CRM that helps brokers target clients",
             date: "Sep, 30, 2023",
-            category: "Fullstack & UI/UX"
+            category: "Fullstack"
         },
         {
             src: autoclickergui,
