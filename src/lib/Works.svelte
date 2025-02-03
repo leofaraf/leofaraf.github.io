@@ -1,7 +1,6 @@
 <style>
     .company-review-box {
         margin-top: 100px;
-        height: 500px;
         padding: 75px;
         border-radius: 10px;
         display: flex;
@@ -15,6 +14,8 @@
         justify-content: space-between;
         width: 100%;
         gap: 40px;
+        height: auto;
+        min-height: max-content;
     }
 
     .company-review-photo {
@@ -24,6 +25,7 @@
         border-radius: 15px;
         background-position: -50px;
         background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .company-review-content {
@@ -52,9 +54,10 @@
 
         .company-review-photo {
             height: 140px;
+            min-height: 140px;
             width: 100%;
             min-width: 0;
-            background-position: 0px -50px;
+            background-position: 0px;
         }
     }
 
@@ -72,7 +75,7 @@
         }
 
         .company-review-box {
-            height: 375px;
+            /* height: 375px; */
         }
 
         .works {
@@ -83,6 +86,7 @@
     @media screen and (max-width: 1000px) {
         .company-review-box {
             padding: 40px 20px;
+            box-sizing: content-box;
         }
 
         .company-review-box-inner {
