@@ -174,23 +174,16 @@
     const works = [
         {
             src: converterPy,
-            title: "3d-converter-py",
-            description: "python 3d models convertor which support obj, dae, glb, fbx, ply, stl",
+            title: "Open-source 3D models convertor",
+            description: "3d-converter-py models convertor which support obj, dae, glb, fbx, ply, stl",
             date: "Feb, 28, 2024",
             category: "Automation"
         },
         {
-            src: autoclickergui,
-            title: "AutoClickeRGUI",
-            description: "This is a quick auto clicker written in Rust with beautiful GUI",
-            date: "Aug, 20, 2023",
-            category: "Fullstack"
-        },
-        {
             src: makeVpnBot,
-            title: "make-vpn-bot",
-            description: "telegram bot that help be private anywhere",
-            date: "Mar, 4, 2024",
+            title: "Game launcher (GUI)",
+            description: "Cross-platform, high performance game launcher for famous youtuber (1M+)",
+            date: "Sep, 3, 2024",
             category: "Fullstack"
         },
         {
@@ -199,6 +192,13 @@
             description: "CRM that helps brokers target clients",
             date: "Sep, 30, 2023",
             category: "Fullstack & UI/UX"
+        },
+        {
+            src: autoclickergui,
+            title: "Open-source autoclicker, 1200 CPS+",
+            description: "AutoClickeRGUI. Rust-written low-level, competitors reach aroud 70 CPS",
+            date: "Aug, 20, 2023",
+            category: "Fullstack"
         },
     ]
 
