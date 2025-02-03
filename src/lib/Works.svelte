@@ -23,8 +23,8 @@
         min-width: 230px;
         height: auto;
         border-radius: 15px;
-        background-position: -50px;
         background-size: cover;
+        height: 300px;
         background-repeat: no-repeat;
     }
 
